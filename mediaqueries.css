@@ -3,8 +3,8 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
+  .projects-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* O'rtacha ekranda 3 tadan */
   }
   #contact,
   #projects {
@@ -30,12 +30,9 @@
   .arrow {
     display: none;
   }
-  section,
-  .section-container {
-    height: fit-content;
-  }
   section {
     margin: 0 5%;
+    height: fit-content;
   }
   .section__pic-container {
     width: 275px;
@@ -44,6 +41,12 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .projects-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* Planshetda 2 tadan */
+  }
+  .skills-wrapper {
+    grid-template-columns: 1fr; /* Ko'nikmalar ustma-ust tushadi */
   }
 }
 
@@ -99,5 +102,15 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .projects-wrapper {
+    grid-template-columns: 1fr; /* Mobilda bittadan tushadi */
+  }
+  .article-container {
+    grid-template-columns: 1fr; /* Ko'nikmalar yozuvlari mobilda ustma-ust */
+  }
+  .img-wrapper {
+    height: auto;
+    max-height: 250px;
   }
 }
