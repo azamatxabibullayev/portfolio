@@ -1,349 +1,397 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azamat Xabibullayev - Back end developer</title>
+    <title>Azamat Xabibullayev — Backend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   </head>
   <body>
+    <!-- ===== DESKTOP NAV ===== -->
     <nav id="desktop-nav">
-      <div class="logo">My Portfolio</div>
-      <div>
+      <a href="#"><div class="logo">AX<span class="logo-dot">.</span></div></a>
+      <div class="nav-center">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#experience" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#work" data-i18n="nav_experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">My Portfolio</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="nav-controls">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== HAMBURGER NAV ===== -->
+    <nav id="hamburger-nav">
+      <div class="logo">AX<span class="logo-dot">.</span></div>
+      <div class="nav-controls-mobile">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()" data-i18n="nav_about">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#work" onclick="toggleMenu()" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" data-i18n="nav_contact">Contact</a></li>
+          </div>
         </div>
       </div>
     </nav>
+
+    <!-- ===== HERO / PROFILE ===== -->
     <section id="profile">
+      <div class="hero-bg-pattern"></div>
       <div class="section__pic-container">
-        <img src="./assets/profile_pic.jpg" alt="Profile picture" />
+        <div class="pic-frame">
+          <img src="./assets/profile_pic.jpg" alt="Azamat Xabibullayev" />
+        </div>
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Xabibullayev Azamat</h1>
-        <p class="section__text__p2">Backend Developer</p>
+        <p class="section__text__p1" data-i18n="hero_greeting">Salom, men</p>
+        <h1 class="title hero-title">Azamat<br /><span class="title-accent">Xabibullayev</span></h1>
+        <p class="section__text__p2" data-i18n="hero_role">Backend Dasturchi</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume.pdf')"
-          >
-            Download CV
+          <button class="btn btn-primary" onclick="window.open('./assets/Resume.pdf')" data-i18n="btn_cv">
+            CV Yuklab olish
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+          <button class="btn btn-secondary" onclick="location.href='./#contact'" data-i18n="btn_contact">
+            Bog'lanish
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/azamatxabibullayev/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/azamatxabibullayev'"
-          />
+          <a href="https://www.linkedin.com/in/azamatxabibullayev/" target="_blank" class="social-link" aria-label="LinkedIn">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" />
+          </a>
+          <a href="https://github.com/azamatxabibullayev" target="_blank" class="social-link" aria-label="GitHub">
+            <img src="./assets/github.png" alt="GitHub" class="icon" />
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- ===== ABOUT ===== -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/checkmark.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Completed Projects</h3>
-              <p>15+</p>
-            </div>
+      <div class="section-header">
+        <p class="section-label" data-i18n="about_label">Ma'lumot</p>
+        <h2 class="section-title" data-i18n="about_title">Men haqimda</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">2+</span>
+            <span class="stat-label" data-i18n="about_exp">Yillik tajriba</span>
           </div>
-          <div class="text-container">
-            <p>
-              I’m a Python Backend Developer with experience in FastAPI, Django, REST API, Docker, and AWS. I’ve worked on various projects where I built efficient and scalable backend systems, and I’m confident I can help you with your project.<br>
-              How I Can Help:<br>
-              Backend Development: I specialize in building APIs with FastAPI and Django.<br>
-              Database Management: I’ve worked with databases like PostgreSQL and MySQL.<br>
-              Deployment: I use Docker and AWS to deploy applications efficiently.<br>
-              I’d love to discuss your project further and how I can contribute. Looking forward to hearing from you!<br>
-            </p>
+          <div class="stat-card">
+            <span class="stat-number">15+</span>
+            <span class="stat-label" data-i18n="about_projects">Tugallangan loyihalar</span>
           </div>
         </div>
+        <div class="about-text">
+          <p data-i18n="about_text">
+            Men Python Backend Developer bo'lib, FastAPI, Django, REST API, Docker va AWS texnologiyalarida tajribaga egaman. Samarali va kengaytiriladigan backend tizimlarini qurish bo'yicha bir nechta loyihalarda ishlaganman.
+          </p>
+          <p class="about-text-highlight" data-i18n="about_help">
+            <strong>Backend:</strong> FastAPI va Django bilan API yaratish · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Deploy:</strong> Docker, AWS
+          </p>
+        </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
+
+    <!-- ===== SKILLS ===== -->
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="skills-wrapper">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Main skills</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Python</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Django Web Framework</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>FastAPI</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>REST API</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Aiogram</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-            </div>
+      <div class="section-header">
+        <p class="section-label" data-i18n="skills_label">Texnologiyalar</p>
+        <h2 class="section-title" data-i18n="skills_title">Ko'nikmalar</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-column">
+          <h3 class="skills-category" data-i18n="skills_main">Asosiy ko'nikmalar</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Python</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Django</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">FastAPI</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">REST API</span><span class="skill-level mid" data-i18n="level_mid">Intermediate</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">PostgreSQL</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Aiogram</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Additional</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Go</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>HTML CSS JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Linux</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Asterisk</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Advance</p>
-                </div>
-              </article>
-            </div>
+        </div>
+        <div class="skills-column">
+          <h3 class="skills-category" data-i18n="skills_additional">Qo'shimcha ko'nikmalar</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Go</span><span class="skill-level mid" data-i18n="level_mid">Intermediate</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">HTML / CSS / JS</span><span class="skill-level mid" data-i18n="level_mid">Intermediate</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Linux</span><span class="skill-level mid" data-i18n="level_mid">Intermediate</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Asterisk</span><span class="skill-level mid" data-i18n="level_mid">Intermediate</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">MySQL</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
+            <div class="skill-item"><span class="skill-dot"></span><span class="skill-name">Docker</span><span class="skill-level advance" data-i18n="level_advance">Advance</span></div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
+
+    <!-- ===== WORK EXPERIENCE ===== -->
+    <section id="work">
+      <div class="section-header">
+        <p class="section-label" data-i18n="work_label">Karyera</p>
+        <h2 class="section-title" data-i18n="work_title">Tajriba</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company" data-i18n="work3_company">Horev Medical Center</h3>
+                <p class="timeline-role" data-i18n="work3_role">Web Developer</p>
+              </div>
+            </div>
+            <p class="timeline-desc" data-i18n="work3_desc">
+              Tibbiy markaz uchun to'liq veb-sayt va Telegram bot ishlab chiqdim. Bemorlar uchun onlayn navbat tizimi, shifokorlar jadvali va yangiliklar moduli yaratdim. Django backend + Aiogram bot texnologiyalaridan foydalandim.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Aiogram</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company">Pixel Tech</h3>
+                <p class="timeline-role" data-i18n="work2_role">Backend Developer & Asterisk Engineer</p>
+              </div>
+            </div>
+            <p class="timeline-desc" data-i18n="work2_desc">
+              Amaliyot sifatida kirib, keyinchalik to'laqonli xodim sifatida davom etdim. Backend API ishlab chiqish bilan bir qatorda Asterisk VoIP tizimi ustida ham ishlash imkoniga ega bo'ldim. Telefon qo'ng'irog'i boshqaruv tizimlari integratsiyasini amalga oshirdim.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Asterisk</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-company" data-i18n="work1_company">Freelance</h3>
+                <p class="timeline-role" data-i18n="work1_role">Python Developer</p>
+              </div>
+            </div>
+            <p class="timeline-desc" data-i18n="work1_desc">
+              Mustaqil ishchi sifatida 3 ta Telegram bot va 1 ta to'liq veb-sayt loyihalarini muvaffaqiyatli tamomlladim. Turli mijozlar uchun avtomatlashtirish, ma'lumotlar to'plash va biznes jarayonlarini optimallashtirishga yo'naltirilgan yechimlar ishlab chiqdim.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Aiogram</span>
+              <span class="tag">Django</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="projects-wrapper">
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/horev-website.jpg" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Horev Medical Center</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://horevmedical.uz/'">Website Link</button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/horev-bot.jpg" alt="Project 2" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Horev Medical Bot</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://t.me//horevmed_bot'">Bot link</button>
+      <div class="section-header">
+        <p class="section-label" data-i18n="projects_label">Portfel</p>
+        <h2 class="section-title" data-i18n="projects_title">Proyektlar</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/horev-website.jpg" alt="Horev Medical Center" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://horevmedical.uz/'" data-i18n="proj_visit">Saytga o'tish</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/kriptoindex.png" alt="Project 3" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Cryptoindex</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://kriptoindex.uz/uz/'">Website link</button>
+          <div class="project-info">
+            <h3 class="project-name">Horev Medical Center</h3>
+            <p class="project-desc" data-i18n="proj1_desc">Tibbiy markaz uchun to'liq veb-sayt</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/horev-bot.jpg" alt="Horev Medical Bot" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://t.me/horevmed_bot'" data-i18n="proj_visit">Botga o'tish</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/finance_manager.png" alt="Project 4" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Finance Manager</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/azamatxabibullayev/finance_manager'">Github</button>
+          <div class="project-info">
+            <h3 class="project-name">Horev Medical Bot</h3>
+            <p class="project-desc" data-i18n="proj2_desc">Telegram navbat va ma'lumot boti</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/kriptoindex.png" alt="Cryptoindex" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://kriptoindex.uz/uz/'" data-i18n="proj_visit">Saytga o'tish</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/delivery_fastapi.png" alt="Project 5" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Delivery FastAPI</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/azamatxabibullayev/Delivery_FastAPI'">Github</button>
+          <div class="project-info">
+            <h3 class="project-name">Cryptoindex</h3>
+            <p class="project-desc" data-i18n="proj3_desc">Kripto kurs kuzatuv platformasi</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/finance_manager.png" alt="Finance Manager" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://github.com/azamatxabibullayev/finance_manager'">GitHub</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/online_chat.png" alt="Project 6" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">RealTime Chat</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/azamatxabibullayev/online_chat'">Github</button>
+          <div class="project-info">
+            <h3 class="project-name">Finance Manager</h3>
+            <p class="project-desc" data-i18n="proj4_desc">Moliya boshqaruv tizimi</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/delivery_fastapi.png" alt="Delivery FastAPI" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://github.com/azamatxabibullayev/Delivery_FastAPI'">GitHub</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/downloader_bot.png" alt="Project 7" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title project-title">Downloader bot</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/azamatxabibullayev/downloader-bot'">Github</button>
+          <div class="project-info">
+            <h3 class="project-name">Delivery FastAPI</h3>
+            <p class="project-desc" data-i18n="proj5_desc">Yetkazib berish xizmati API</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/online_chat.png" alt="RealTime Chat" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://github.com/azamatxabibullayev/online_chat'">GitHub</button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="img-wrapper">
-              <img src="./assets/online-university.png" alt="Project 8" class="project-img" />
+          <div class="project-info">
+            <h3 class="project-name">RealTime Chat</h3>
+            <p class="project-desc" data-i18n="proj6_desc">WebSocket real-vaqtli chat</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/downloader_bot.png" alt="Downloader Bot" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://github.com/azamatxabibullayev/downloader-bot'">GitHub</button>
             </div>
-            <h2 class="experience-sub-title project-title">Online University</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/azamatxabibullayev/crm-online-university'">Github</button>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Downloader Bot</h3>
+            <p class="project-desc" data-i18n="proj7_desc">Media yuklab olish boti</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img-wrap">
+            <img src="./assets/online-university.png" alt="Online University" class="project-img" />
+            <div class="project-overlay">
+              <button class="project-link-btn" onclick="location.href='https://github.com/azamatxabibullayev/crm-online-university'">GitHub</button>
             </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Online University</h3>
+            <p class="project-desc" data-i18n="proj8_desc">CRM onlayn ta'lim platformasi</p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
+
+    <!-- ===== CONTACT ===== -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/telegram.png" alt="Telegram icon" class="icon contact-icon" />
-          <p><a href="https://t.me/aza_developer">Telegram</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/instagram.png" alt="Instagram icon" class="icon contact-icon" />
-          <p><a href="https://www.instagram.com/aza__developer/">Instagram</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/number.png" alt="Phone icon" class="icon contact-icon" />
-          <p>+998935419780</p>
-        </div>
+      <div class="section-header">
+        <p class="section-label" data-i18n="contact_label">Muloqot</p>
+        <h2 class="section-title" data-i18n="contact_title">Aloqa</h2>
+      </div>
+      <div class="contact-cards">
+        <a href="https://t.me/aza_developer" target="_blank" class="contact-card">
+          <img src="./assets/telegram.png" alt="Telegram" class="contact-icon-img" />
+          <div class="contact-card-text">
+            <span class="contact-platform">Telegram</span>
+            <span class="contact-handle">@aza_developer</span>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/aza__developer/" target="_blank" class="contact-card">
+          <img src="./assets/instagram.png" alt="Instagram" class="contact-icon-img" />
+          <div class="contact-card-text">
+            <span class="contact-platform">Instagram</span>
+            <span class="contact-handle">@aza__developer</span>
+          </div>
+        </a>
+        <a href="tel:+998935419780" class="contact-card">
+          <img src="./assets/number.png" alt="Phone" class="contact-icon-img" />
+          <div class="contact-card-text">
+            <span class="contact-platform" data-i18n="contact_phone">Telefon</span>
+            <span class="contact-handle">+998 93 541 97 80</span>
+          </div>
+        </a>
       </div>
     </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+      <div class="footer-inner">
+        <div class="footer-logo">AX<span class="logo-dot">.</span></div>
+        <nav>
+          <ul class="nav-links footer-links">
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#experience" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#work" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
           </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; A.Xabibullayev. All Rights Reserved.</p>
+        </nav>
+        <p class="footer-copy">© 2025 A.Xabibullayev. All Rights Reserved.</p>
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,116 +1,183 @@
+/* ==========================================
+   MEDIAQUERIES — RESPONSIVE DESIGN
+   ========================================== */
+
+/* ===== LARGE DESKTOP (max 1400px) ===== */
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .projects-wrapper {
-    grid-template-columns: repeat(3, 1fr); /* O'rtacha ekranda 3 tadan */
-  }
-  #contact,
-  #projects {
-    height: fit-content;
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/* ===== MEDIUM DESKTOP (max 1200px) ===== */
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; }
+
   section {
-    margin: 0 5%;
-    height: fit-content;
+    padding: calc(var(--nav-height) + 3rem) 3rem 4rem;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  #profile {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: calc(var(--nav-height) + 2rem);
+    text-align: center;
+    min-height: 100vh;
   }
-  .about-containers {
-    margin-top: 0;
+
+  .section__text { max-width: 100%; }
+  .btn-container { justify-content: center; }
+  #socials-container { justify-content: center; }
+
+  .pic-frame {
+    width: 280px; height: 280px;
   }
-  .projects-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* Planshetda 2 tadan */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .skills-wrapper {
-    grid-template-columns: 1fr; /* Ko'nikmalar ustma-ust tushadi */
+
+  .about-stats {
+    flex-direction: row;
+    justify-content: center;
+    min-width: unset;
   }
+
+  .stat-card { flex: 1; max-width: 200px; }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    padding: 2rem 3rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+/* ===== TABLET (max 900px) ===== */
+@media screen and (max-width: 900px) {
+  section {
+    padding: calc(var(--nav-height) + 2.5rem) 2rem 3.5rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
+
+  .timeline { max-width: 100%; }
+
+  .timeline-header {
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center;
+    align-items: flex-start;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  .contact-cards {
+    flex-direction: column;
+    max-width: 420px;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+
+  .contact-card { min-width: unset; }
+}
+
+/* ===== MOBILE (max 600px) ===== */
+@media screen and (max-width: 600px) {
+  :root { --nav-height: 64px; }
+
+  section {
+    padding: calc(var(--nav-height) + 2rem) 1.25rem 3rem;
   }
-  .title {
-    font-size: 2rem;
+
+  #hamburger-nav { padding: 0 1rem; }
+
+  .logo { font-size: 1.3rem; }
+
+  .nav-controls-mobile { gap: 0.35rem; }
+
+  .lang-btn { padding: 3px 6px; font-size: 0.65rem; }
+
+  .theme-toggle { width: 32px; height: 32px; font-size: 0.85rem; }
+
+  /* Hero */
+  #profile {
+    gap: 2rem;
+    padding-top: calc(var(--nav-height) + 1.5rem);
+    min-height: unset;
+    padding-bottom: 3rem;
   }
-  .text-container {
-    text-align: justify;
+
+  .pic-frame { width: 220px; height: 220px; }
+
+  .hero-title { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+
+  .section__text__p2 { font-size: 1rem; }
+
+  .hero-tagline { font-size: 0.72rem; }
+
+  .btn { font-size: 0.82rem; padding: 0.65rem 1.3rem; }
+
+  /* About */
+  .about-stats {
+    flex-direction: row;
+    gap: 0.75rem;
   }
-  .projects-wrapper {
-    grid-template-columns: 1fr; /* Mobilda bittadan tushadi */
+
+  .stat-number { font-size: 1.9rem; }
+
+  /* Timeline */
+  .timeline-item {
+    grid-template-columns: 16px 1fr;
+    gap: 0 1rem;
   }
-  .article-container {
-    grid-template-columns: 1fr; /* Ko'nikmalar yozuvlari mobilda ustma-ust */
+
+  .timeline-dot { width: 12px; height: 12px; }
+
+  .timeline-content { padding: 1.25rem; }
+
+  .timeline-company { font-size: 1rem; }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  .img-wrapper {
-    height: auto;
-    max-height: 250px;
+
+  .project-img-wrap { height: 200px; }
+
+  /* Contact */
+  .contact-cards {
+    gap: 0.85rem;
+    max-width: 100%;
   }
+
+  .contact-card { padding: 1rem 1.25rem; }
+
+  /* Footer */
+  footer { padding: 2rem 1.25rem; }
+
+  .footer-links { gap: 0.75rem; }
+
+  .section-title { font-size: clamp(1.7rem, 6vw, 2.4rem); }
+}
+
+/* ===== VERY SMALL SCREENS (max 380px) ===== */
+@media screen and (max-width: 380px) {
+  .lang-switcher { gap: 0; }
+  .lang-btn { padding: 3px 5px; font-size: 0.6rem; }
+  .pic-frame { width: 180px; height: 180px; }
+  .btn-container { gap: 0.6rem; }
+  .btn { font-size: 0.78rem; padding: 0.6rem 1.1rem; }
 }
