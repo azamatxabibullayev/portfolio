@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz" data-theme="light">
+<html lang="uz">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -37,10 +37,6 @@
             <button class="lang-btn" data-lang="ru">RU</button>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <span class="theme-icon sun">☀️</span>
-            <span class="theme-icon moon">🌙</span>
-        </button>
     </div>
 </nav>
 
@@ -53,10 +49,6 @@
             <button class="lang-btn" data-lang="ru">RU</button>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
-            <span class="theme-icon sun">☀️</span>
-            <span class="theme-icon moon">🌙</span>
-        </button>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -77,12 +69,45 @@
 <!-- ===== HERO / PROFILE ===== -->
 <section id="profile">
     <div class="hero-bg-pattern"></div>
-    <div class="section__pic-container">
-        <div class="pic-frame">
-            <img src="./assets/profile_pic.jpg" alt="Azamat Xabibullayev"/>
+    <div class="section__pic-container hero-visual">
+        <div class="code-window" aria-hidden="true">
+            <div class="code-window__bar">
+                <div class="code-window__dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <span class="code-window__filename">developer.py</span>
+            </div>
+            <div class="code-window__body">
+                <div class="code-lines">
+                    <div class="code-line"><span class="ln">1</span><span class="code"><span class="tok-kw">class</span> <span
+                            class="tok-cls">Developer</span>:</span></div>
+                    <div class="code-line"><span class="ln">2</span><span class="code">    <span
+                            class="tok-kw">def</span> <span class="tok-fn">__init__</span>(<span
+                            class="tok-param">self</span>):</span></div>
+                    <div class="code-line"><span class="ln">3</span><span class="code">        <span class="tok-param">self</span>.name = <span
+                            class="tok-str">"Azamat Xabibullayev"</span></span></div>
+                    <div class="code-line"><span class="ln">4</span><span class="code">        <span class="tok-param">self</span>.role = <span
+                            class="tok-str">"<span data-i18n="hero_role">Backend Dasturchi</span>"</span></span></div>
+                    <div class="code-line"><span class="ln">6</span><span class="code">        <span class="tok-param">self</span>.based_in = <span
+                            class="tok-str">"Tashkent, UZ"</span></span></div>
+                    <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;</span></div>
+                    <div class="code-line"><span class="ln">8</span><span class="code">    <span
+                            class="tok-kw">def</span> <span class="tok-fn">status</span>(<span
+                            class="tok-param">self</span>):</span></div>
+                    <div class="code-line"><span class="ln">9</span><span class="code">        <span class="tok-kw">return</span> <span
+                            class="tok-str">"<span data-i18n="hero_status">yangi loyihalarga ochiq</span>"</span><span
+                            class="code-cursor"></span></span></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="section__text">
+        <div class="status-badge" aria-hidden="true">
+            <span class="status-dot"></span>
+            <span data-i18n="hero_status">yangi loyihalarga ochiq</span>
+        </div>
         <p class="section__text__p1" data-i18n="hero_greeting">Salom, men</p>
         <h1 class="title hero-title">Azamat<br/><span class="title-accent">Xabibullayev</span></h1>
         <p class="section__text__p2" data-i18n="hero_role">Backend Dasturchi</p>
