@@ -96,7 +96,7 @@ const translations = {
     work_title:       "Опыт",
     work4_company:    "Premier Uzbekistan",
     work4_role:       "Odoo разработчик",
-    work4_date:       "Июль 2026 - Настоящее время",
+    work4_date:       "Июль 2026 - сейчас",
     work4_desc:       "Разрабатываю кастомные модули Odoo под бизнес-задачи компании и занимаюсь их доработкой и обновлением.",
     work3_company:    "Horev Medical Center",
     work3_role:       "Веб-разработчик",
