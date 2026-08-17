@@ -21,8 +21,8 @@ const translations = {
     about_title:    "Men haqimda",
     about_exp:      "Yillik tajriba",
     about_projects: "Tugallangan loyihalar",
-    about_text:     "Men Python Backend Dasturchi bo'lib, FastAPI, Django, REST API, Docker va AWS texnologiyalarida tajribaga egaman. Samarali va kengaytiriladigan backend tizimlarini qurish bo'yicha bir nechta loyihalarda muvaffaqiyatli ishlaganman.",
-    about_help:     "<strong>Backend:</strong> FastAPI va Django bilan API yaratish · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Deploy:</strong> Docker, AWS",
+    about_text:     "Men Python Backend Dasturchi bo'lib, FastAPI, Django va ma'lumotlar bazalari (PostgreSQL, MySQL) bilan ishlayman. Bundan tashqari Telegram botlar yarataman, Asterisk VoIP tizimlari va Odoo modullari ustida ham ishlayman.",
+    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Qo'shimcha:</strong> Telegram botlar, Asterisk, Odoo",
 
     skills_label:     "Texnologiyalar",
     skills_title:     "Ko'nikmalar",
@@ -33,9 +33,12 @@ const translations = {
 
     work_label:       "Karyera",
     work_title:       "Tajriba",
+    work4_company:    "Premier Uzbekistan",
+    work4_role:       "Odoo Developer",
+    work4_desc:       "Odoo platformasida biznes ehtiyojlariga mos maxsus modullarni yarataman va mavjud modullarni yangilab, yaxshilab boraman.",
     work3_company:    "Horev Medical Center",
     work3_role:       "Web Developer",
-    work3_desc:       "Tibbiy markaz uchun to'liq veb-sayt va Telegram bot ishlab chiqdim. Bemorlar uchun onlayn navbat tizimi, shifokorlar jadvali va yangiliklar moduli yaratdim. Django backend + Aiogram bot texnologiyalaridan foydalandim.",
+    work3_desc:       "Tibbiy markaz uchun Telegram bot yaratdim — u orqali bemorlar shifokorlardan onlayn, anonim tarzda konsultatsiya olish imkoniyatiga ega bo'ladi. Shuningdek, ularning mavjud veb-saytini yangilab berdim.",
     work2_role:       "Backend Developer & Asterisk Engineer",
     work2_desc:       "Amaliyot sifatida kirib, keyinchalik to'laqonli xodim sifatida davom etdim. Backend API ishlab chiqish bilan bir qatorda Asterisk VoIP tizimi ustida ham ishlash imkoniga ega bo'ldim. Telefon qo'ng'irog'i boshqaruv tizimlari integratsiyasini amalga oshirdim.",
     work1_company:    "Freelance",
@@ -45,8 +48,8 @@ const translations = {
     projects_label:   "Portfel",
     projects_title:   "Loyihalar",
     proj_visit:       "Ko'rish",
-    proj1_desc:       "Tibbiy markaz uchun to'liq veb-sayt",
-    proj2_desc:       "Telegram navbat va ma'lumot boti",
+    proj1_desc:       "Tibbiy markaz uchun yangilangan veb-sayt",
+    proj2_desc:       "Shifokordan anonim konsultatsiya olish boti",
     proj3_desc:       "Kripto kurs kuzatuv platformasi",
     proj4_desc:       "Moliya boshqaruv tizimi",
     proj5_desc:       "AI yordamida moliyaviy hisobchi",
@@ -76,8 +79,8 @@ const translations = {
     about_title:    "Обо мне",
     about_exp:      "Лет опыта",
     about_projects: "Завершённых проектов",
-    about_text:     "Я Python Backend разработчик с опытом в FastAPI, Django, REST API, Docker и AWS. Успешно участвовал в нескольких проектах по созданию эффективных и масштабируемых backend-систем.",
-    about_help:     "<strong>Backend:</strong> API на FastAPI и Django · <strong>БД:</strong> PostgreSQL, MySQL · <strong>Deploy:</strong> Docker, AWS",
+    about_text:     "Я Python Backend-разработчик, специализируюсь на FastAPI, Django и работе с базами данных (PostgreSQL, MySQL). Дополнительно создаю Telegram-ботов, работаю с VoIP-системой Asterisk и разрабатываю модули Odoo.",
+    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>БД:</strong> PostgreSQL, MySQL · <strong>Дополнительно:</strong> Telegram-боты, Asterisk, Odoo",
 
     skills_label:     "Технологии",
     skills_title:     "Навыки",
@@ -88,9 +91,12 @@ const translations = {
 
     work_label:       "Карьера",
     work_title:       "Опыт",
+    work4_company:    "Premier Uzbekistan",
+    work4_role:       "Odoo разработчик",
+    work4_desc:       "Разрабатываю кастомные модули Odoo под бизнес-задачи компании и занимаюсь их доработкой и обновлением.",
     work3_company:    "Horev Medical Center",
     work3_role:       "Веб-разработчик",
-    work3_desc:       "Разработал полный веб-сайт и Telegram-бота для медицинского центра. Создал систему онлайн-записи к врачам, расписание врачей и модуль новостей. Использовал Django backend + Aiogram.",
+    work3_desc:       "Разработал Telegram-бота для медицинского центра, который позволяет пациентам получать анонимные онлайн-консультации у врачей. Также обновил их существующий веб-сайт.",
     work2_role:       "Backend разработчик & Asterisk инженер",
     work2_desc:       "Начал как стажёр и продолжил в качестве полноценного сотрудника. Занимался разработкой backend API, а также работой с VoIP-системой Asterisk. Осуществил интеграцию систем управления телефонными звонками.",
     work1_company:    "Фриланс",
@@ -100,8 +106,8 @@ const translations = {
     projects_label:   "Портфолио",
     projects_title:   "Проекты",
     proj_visit:       "Открыть",
-    proj1_desc:       "Полноценный сайт медицинского центра",
-    proj2_desc:       "Telegram бот записи и информации",
+    proj1_desc:       "Обновлённый веб-сайт медицинского центра",
+    proj2_desc:       "Бот для анонимной консультации у врача",
     proj3_desc:       "Платформа мониторинга криптовалют",
     proj4_desc:       "Система управления финансами",
     proj5_desc:       "ИИ финансовый помощник",
@@ -131,8 +137,8 @@ const translations = {
     about_title:    "About Me",
     about_exp:      "Years of Experience",
     about_projects: "Completed Projects",
-    about_text:     "I'm a Python Backend Developer with experience in FastAPI, Django, REST API, Docker, and AWS. I've worked on various projects building efficient and scalable backend systems.",
-    about_help:     "<strong>Backend:</strong> Building APIs with FastAPI & Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Deploy:</strong> Docker, AWS",
+    about_text:     "I'm a Python Backend Developer specializing in FastAPI, Django, and database design (PostgreSQL, MySQL). I also build Telegram bots, work with Asterisk VoIP systems, and develop custom Odoo modules.",
+    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Also:</strong> Telegram Bots, Asterisk, Odoo",
 
     skills_label:     "Technologies",
     skills_title:     "Skills",
@@ -143,9 +149,12 @@ const translations = {
 
     work_label:       "Career",
     work_title:       "Experience",
+    work4_company:    "Premier Uzbekistan",
+    work4_role:       "Odoo Developer",
+    work4_desc:       "Developing custom Odoo modules tailored to business needs, along with maintaining and updating existing ones.",
     work3_company:    "Horev Medical Center",
     work3_role:       "Web Developer",
-    work3_desc:       "Developed a full website and Telegram bot for the medical center. Built an online appointment system, doctors' schedule module, and news section using Django backend and Aiogram.",
+    work3_desc:       "Built a Telegram bot for the medical center that lets patients get anonymous online consultations from doctors. Also updated and improved their existing website.",
     work2_role:       "Backend Developer & Asterisk Engineer",
     work2_desc:       "Joined as an intern and grew into a full-time developer. Worked on backend API development as well as the Asterisk VoIP system. Implemented phone call management system integrations.",
     work1_company:    "Freelance",
@@ -155,8 +164,8 @@ const translations = {
     projects_label:   "Portfolio",
     projects_title:   "Projects",
     proj_visit:       "Visit",
-    proj1_desc:       "Full website for a medical center",
-    proj2_desc:       "Telegram appointment & info bot",
+    proj1_desc:       "Updated website for the medical center",
+    proj2_desc:       "Bot for anonymous doctor consultations",
     proj3_desc:       "Cryptocurrency monitoring platform",
     proj4_desc:       "Personal finance management system",
     proj5_desc:       "AI-powered finance tracker",
@@ -276,4 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Animations
   initScrollAnimations();
   initActiveNav();
+
+  // Footer copyright year
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
