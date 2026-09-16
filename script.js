@@ -12,7 +12,7 @@ const translations = {
     nav_contact:    "Aloqa",
 
     hero_greeting:  "Salom, men",
-    hero_role:      "Backend Dasturchi",
+    hero_role:      "Software Engineer",
     hero_status:    "yangi loyihalarga ochiq",
     btn_cv:         "CV Yuklab olish",
     btn_contact:    "Bog'lanish",
@@ -21,8 +21,8 @@ const translations = {
     about_title:    "Men haqimda",
     about_exp:      "Yillik tajriba",
     about_projects: "Tugallangan loyihalar",
-    about_text:     "Men Python Backend Dasturchi bo'lib, FastAPI, Django va ma'lumotlar bazalari (PostgreSQL, MySQL) bilan ishlayman. Bundan tashqari Telegram botlar yarataman, Asterisk VoIP tizimlari va Odoo modullari ustida ham ishlayman.",
-    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Qo'shimcha:</strong> Telegram botlar, Asterisk, Odoo",
+    about_text:     "Python bilan ishlaydigan Software Engineerman. Arxitektura, ma'lumotlar bazasi va deploygacha bo'lgan butun jarayonni o'zim olib boraman. Asosan FastAPI va Django, shuningdek Telegram botlar, Asterisk VoIP va Odoo modullari bilan ham ishlayman.",
+    about_help:     "<strong>Core:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Also:</strong> Telegram Bots, Asterisk, Odoo",
 
     skills_label:     "Texnologiyalar",
     skills_title:     "Ko'nikmalar",
@@ -45,7 +45,7 @@ const translations = {
     work2_date:       "Oktyabr 2025 - Dekabr 2025",
     work2_desc:       "Amaliyot sifatida kirib, keyinchalik to'laqonli xodim sifatida davom etdim. Backend API ishlab chiqish bilan bir qatorda Asterisk VoIP tizimi ustida ham ishlash imkoniga ega bo'ldim. Telefon qo'ng'irog'i boshqaruv tizimlari integratsiyasini amalga oshirdim.",
     work1_company:    "Freelance",
-    work1_role:       "Python Developer",
+    work1_role:       "Software Engineer",
     work1_desc:       "Mustaqil ishchi sifatida 4 ta Telegram bot va 1 ta to'liq veb-sayt loyihalarini muvaffaqiyatli yakunladim. Turli mijozlar uchun avtomatlashtirish va biznes jarayonlarini optimallashtirishga yo'naltirilgan yechimlar ishlab chiqdim.",
 
     projects_label:   "Portfel",
@@ -73,7 +73,7 @@ const translations = {
     nav_contact:    "Контакт",
 
     hero_greeting:  "Привет, я",
-    hero_role:      "Backend разработчик",
+    hero_role:      "Software Engineer",
     hero_status:    "открыт для новых проектов",
     btn_cv:         "Скачать CV",
     btn_contact:    "Связаться",
@@ -82,8 +82,8 @@ const translations = {
     about_title:    "Обо мне",
     about_exp:      "Лет опыта",
     about_projects: "Завершённых проектов",
-    about_text:     "Я Python Backend-разработчик, специализируюсь на FastAPI, Django и работе с базами данных (PostgreSQL, MySQL). Дополнительно создаю Telegram-ботов, работаю с VoIP-системой Asterisk и разрабатываю модули Odoo.",
-    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>БД:</strong> PostgreSQL, MySQL · <strong>Дополнительно:</strong> Telegram-боты, Asterisk, Odoo",
+    about_text:     "Software Engineer, работаю с Python. Веду весь цикл — от архитектуры и проектирования базы данных до деплоя. В основном FastAPI и Django, а также Telegram-боты, Asterisk VoIP и модули Odoo.",
+    about_help:     "<strong>Core:</strong> FastAPI, Django · <strong>БД:</strong> PostgreSQL, MySQL · <strong>Дополнительно:</strong> Telegram-боты, Asterisk, Odoo",
 
     skills_label:     "Технологии",
     skills_title:     "Навыки",
@@ -106,7 +106,7 @@ const translations = {
     work2_date:       "Октябрь 2025 - Декабрь 2025",
     work2_desc:       "Начал как стажёр и продолжил в качестве полноценного сотрудника. Занимался разработкой backend API, а также работой с VoIP-системой Asterisk. Осуществил интеграцию систем управления телефонными звонками.",
     work1_company:    "Фриланс",
-    work1_role:       "Python разработчик",
+    work1_role:       "Software Engineer",
     work1_desc:       "Как независимый разработчик успешно завершил 4 Telegram-бота и 1 полноценный веб-сайт. Разрабатывал решения для автоматизации и оптимизации бизнес-процессов для различных клиентов.",
 
     projects_label:   "Портфолио",
@@ -134,7 +134,7 @@ const translations = {
     nav_contact:    "Contact",
 
     hero_greeting:  "Hello, I'm",
-    hero_role:      "Backend Developer",
+    hero_role:      "Software Engineer",
     hero_status:    "open to new projects",
     btn_cv:         "Download CV",
     btn_contact:    "Contact Info",
@@ -143,8 +143,8 @@ const translations = {
     about_title:    "About Me",
     about_exp:      "Years of Experience",
     about_projects: "Completed Projects",
-    about_text:     "I'm a Python Backend Developer specializing in FastAPI, Django, and database design (PostgreSQL, MySQL). I also build Telegram bots, work with Asterisk VoIP systems, and develop custom Odoo modules.",
-    about_help:     "<strong>Backend:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Also:</strong> Telegram Bots, Asterisk, Odoo",
+    about_text:     "Software Engineer working with Python. I handle the full cycle — architecture, database design, deployment. Mainly FastAPI and Django, plus Telegram bots, Asterisk VoIP, and Odoo modules.",
+    about_help:     "<strong>Core:</strong> FastAPI, Django · <strong>DB:</strong> PostgreSQL, MySQL · <strong>Also:</strong> Telegram Bots, Asterisk, Odoo",
 
     skills_label:     "Technologies",
     skills_title:     "Skills",
@@ -167,7 +167,7 @@ const translations = {
     work2_date:       "October 2025 - December 2025",
     work2_desc:       "Joined as an intern and grew into a full-time developer. Worked on backend API development as well as the Asterisk VoIP system. Implemented phone call management system integrations.",
     work1_company:    "Freelance",
-    work1_role:       "Python Developer",
+    work1_role:       "Software Engineer",
     work1_desc:       "As an independent developer, successfully completed 4 Telegram bots and 1 full website. Delivered automation solutions and optimized business processes for various clients.",
 
     projects_label:   "Portfolio",
