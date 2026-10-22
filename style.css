@@ -857,15 +857,15 @@ section:first-of-type { padding-top: var(--nav-height); }
   gap: 1rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  padding: 1.15rem 1.5rem;
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: var(--shadow);
   text-decoration: none;
   color: var(--text);
   min-width: 240px;
-  flex: 1 1 240px;
+  flex: 1;
   position: relative;
 }
 
@@ -923,6 +923,9 @@ section:first-of-type { padding-top: var(--nav-height); }
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-card-arrow {
@@ -931,6 +934,9 @@ section:first-of-type { padding-top: var(--nav-height); }
   opacity: 0.35;
   flex-shrink: 0;
   transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-card:hover .contact-card-arrow {
