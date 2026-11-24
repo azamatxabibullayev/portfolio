@@ -216,24 +216,12 @@ function applyLanguage(lang) {
 
   // Update html lang attr
   document.documentElement.setAttribute('lang', lang);
-}
 
-/* ===== TOGGLE MENU ===== */
-function toggleMenu() {
-  const menu = document.querySelector('.menu-links');
-  const icon = document.querySelector('.hamburger-icon');
-  menu.classList.toggle('open');
-  icon.classList.toggle('open');
+  // Keep bottom nav aria-labels in sync with the visible (translated) labels
+  document.querySelectorAll('.bottom-nav a').forEach(a => {
+    a.setAttribute('aria-label', a.querySelector('[data-i18n]').textContent);
+  });
 }
-
-/* ===== CLOSE MENU ON OUTSIDE CLICK ===== */
-document.addEventListener('click', function (e) {
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  if (hamburgerMenu && !hamburgerMenu.contains(e.target)) {
-    document.querySelector('.menu-links')?.classList.remove('open');
-    document.querySelector('.hamburger-icon')?.classList.remove('open');
-  }
-});
 
 /* ===== INTERSECTION OBSERVER — FADE IN SECTIONS ===== */
 function initScrollAnimations() {
@@ -265,7 +253,7 @@ function initScrollAnimations() {
 /* ===== ACTIVE NAV HIGHLIGHT ===== */
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
-  const links    = document.querySelectorAll('.nav-links a, .menu-links a');
+  const links    = document.querySelectorAll('.nav-links a');
 
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -284,6 +272,27 @@ function initActiveNav() {
   sections.forEach(s => obs.observe(s));
 }
 
+/* ===== BOTTOM NAV — ACTIVE ITEM ===== */
+function initBottomNav() {
+  const links = document.querySelectorAll('.bottom-nav a');
+  if (!links.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.getAttribute('id');
+      links.forEach(a => {
+        const on = a.getAttribute('href') === `#${id}`;
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-40% 0px -40% 0px' });
+
+  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
+}
+
 /* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded', () => {
   // Language
@@ -297,6 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Animations
   initScrollAnimations();
   initActiveNav();
+  initBottomNav();
 
   // Footer copyright year
   const yearEl = document.getElementById('copyright-year');

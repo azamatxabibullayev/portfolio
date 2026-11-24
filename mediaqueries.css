@@ -11,9 +11,6 @@
 
 /* ===== MEDIUM DESKTOP (max 1200px) ===== */
 @media screen and (max-width: 1200px) {
-  #desktop-nav { display: none; }
-  #hamburger-nav { display: flex; }
-
   section {
     padding: calc(var(--nav-height) + 3rem) 3rem 4rem;
   }
@@ -101,13 +98,13 @@
 
 /* ===== MOBILE (max 600px) ===== */
 @media screen and (max-width: 600px) {
-  :root { --nav-height: 64px; }
+  :root { --nav-height: calc(64px + env(safe-area-inset-top, 0px)); }
 
   section {
     padding: calc(var(--nav-height) + 2rem) 1.25rem 3rem;
   }
 
-  #hamburger-nav { padding: 0 1rem; }
+  #hamburger-nav { padding: 0 1rem; padding-top: env(safe-area-inset-top, 0px); }
 
   .logo { font-size: 1.3rem; }
 
@@ -222,4 +219,17 @@
   .btn { font-size: 0.78rem; padding: 0.6rem 1.1rem; }
   .code, .ln { font-size: 0.64rem; }
   .code-window__body { padding: 0.8rem; }
+}
+
+/* ===== TABLET: top menu fits in one row (768px–900px) ===== */
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .nav-links { gap: 1rem; }
+}
+
+/* ===== PHONES (max 767px): bottom navigation replaces the top menu ===== */
+@media screen and (max-width: 767px) {
+  #desktop-nav { display: none; }
+  #hamburger-nav { display: flex; }
+  .bottom-nav { display: block; }
+  footer { padding-bottom: calc(2rem + var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px)); }
 }
