@@ -219,6 +219,12 @@
   .btn { font-size: 0.78rem; padding: 0.6rem 1.1rem; }
   .code, .ln { font-size: 0.64rem; }
   .code-window__body { padding: 0.8rem; }
+
+  /* Timeline and skills: wrap instead of overflowing */
+  .timeline-content { min-width: 0; overflow-wrap: break-word; }
+  .timeline-date { white-space: normal; border-radius: 12px; }
+  .skills-column { min-width: 0; }
+  .skill-item { flex-wrap: wrap; }
 }
 
 /* ===== TABLET: top menu fits in one row (768px–900px) ===== */
