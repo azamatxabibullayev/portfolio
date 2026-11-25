@@ -46,8 +46,8 @@ const translations = {
     work2_desc:       "Amaliyot sifatida kirib, keyinchalik to'laqonli xodim sifatida davom etdim. Backend API ishlab chiqish bilan bir qatorda Asterisk VoIP tizimi ustida ham ishlash imkoniga ega bo'ldim. Telefon qo'ng'irog'i boshqaruv tizimlari integratsiyasini amalga oshirdim.",
     work1_company:    "Freelance",
     work1_role:       "Software Engineer",
-    work1_date:       "Avgust 2024-yildan beri",
-    work1_desc:       "Mustaqil mijozlar uchun 7 ta Telegram bot va 2 ta veb-sayt ishlab chiqdim: jarayonlarni avtomatlashtirish, ma'lumot yig'ish va optimallashtirish. Freelance loyihalarni hozir ham olib kelmoqdaman.",
+    work1_date:       "Avgust 2024 - Sentyabr 2025",
+    work1_desc:       "Kichik biznes va mustaqil mijozlar uchun 7 ta Telegram bot va 2 ta veb-saytni to'liq sikl bo'yicha ishlab chiqdim: talablarni aniqlashdan serverga joylashtirishgacha. Buyurtma qabul qilish, mijozlar bilan avtomatik muloqot va ma'lumot yig'ish jarayonlarini avtomatlashtirdim.",
 
     projects_label:   "Portfel",
     projects_title:   "Loyihalar",
@@ -108,8 +108,8 @@ const translations = {
     work2_desc:       "Начал как стажёр и продолжил в качестве полноценного сотрудника. Занимался разработкой backend API, а также работой с VoIP-системой Asterisk. Осуществил интеграцию систем управления телефонными звонками.",
     work1_company:    "Фриланс",
     work1_role:       "Software Engineer",
-    work1_date:       "С августа 2024",
-    work1_desc:       "Разработал 7 Telegram-ботов и 2 веб-сайта для независимых клиентов: автоматизация процессов, сбор данных и оптимизация. Продолжаю брать фриланс-проекты.",
+    work1_date:       "Август 2024 - Сентябрь 2025",
+    work1_desc:       "Разработал под ключ 7 Telegram-ботов и 2 веб-сайта для малого бизнеса и частных клиентов: от сбора требований до запуска на сервере. Автоматизировал приём заказов, общение с клиентами и сбор данных.",
 
     projects_label:   "Портфолио",
     projects_title:   "Проекты",
@@ -170,8 +170,8 @@ const translations = {
     work2_desc:       "Joined as an intern and grew into a full-time developer. Worked on backend API development as well as the Asterisk VoIP system. Implemented phone call management system integrations.",
     work1_company:    "Freelance",
     work1_role:       "Software Engineer",
-    work1_date:       "Since August 2024",
-    work1_desc:       "Built 7 Telegram bots and 2 websites for independent clients, focused on automation, data collection and process optimization. Still taking on freelance projects.",
+    work1_date:       "August 2024 - September 2025",
+    work1_desc:       "Delivered 7 Telegram bots and 2 websites end to end for small businesses and independent clients, from gathering requirements to deployment. Automated order intake, customer communication and data collection.",
 
     projects_label:   "Portfolio",
     projects_title:   "Projects",
