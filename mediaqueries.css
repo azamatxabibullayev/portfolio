@@ -225,6 +225,9 @@
   .timeline-date { white-space: normal; border-radius: 12px; }
   .skills-column { min-width: 0; }
   .skill-item { flex-wrap: wrap; }
+
+  /* Bottom nav: let the longest label (UZ "Ko'nikmalar") fit at 320px */
+  .bottom-nav a { padding-left: 0; padding-right: 0; letter-spacing: 0; }
 }
 
 /* ===== TABLET: top menu fits in one row (768px–900px) ===== */
